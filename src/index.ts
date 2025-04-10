@@ -7,6 +7,7 @@ export const client = new Client({
 
 const setup = async () => {
   await initCommandHandler();
+  console.log("(/) Setup complete");
 };
 
 client.on("ready", async () => {

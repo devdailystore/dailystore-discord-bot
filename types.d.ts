@@ -1,4 +1,8 @@
-import type { CommandInteraction, SlashCommandBuilder } from "discord.js";
+import type {
+  ClientEvents,
+  CommandInteraction,
+  SlashCommandBuilder,
+} from "discord.js";
 
 declare global {
   type Command<T = SlashCommandBuilder> = {
