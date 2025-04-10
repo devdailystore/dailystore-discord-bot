@@ -6,12 +6,14 @@ type CommandsMap = Map<string, Command>;
 
 const setupCommands = async () => {
   const commands: CommandsMap = new Map();
+
+  const dir = path.join(__dirname, "../commands");
   const commandFiles = fs
-    .readdirSync(path.join(__dirname, "../commands"))
+    .readdirSync(dir)
     .filter((file) => file.match(/\.(js|ts)$/));
 
   for (const file of commandFiles) {
-    const command = await import(path.join(__dirname, "../commands", file));
+    const command: Command = await import(path.join(dir, file));
     commands.set(command.config.name, command as Command);
   }
 
