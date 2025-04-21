@@ -1,7 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
 
 export class CommandBuilder extends SlashCommandBuilder {
-  public isDisabled: boolean = true;
+  public isDisabled: boolean = false;
 
   constructor() {
     super();
