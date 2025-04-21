@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { Console } from "@/utils/Console";
+import { Console } from "@/lib/Console";
 
 export const client = new Client({
   intents: ["Guilds", "GuildMessages", "GuildMembers", "MessageContent"],
