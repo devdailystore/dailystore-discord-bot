@@ -66,7 +66,7 @@ export const registerCommandHandler = async () => {
 
     if (command.config.isDisabled)
       return Console.Warn(
-        `(/) Command ${interaction.commandName} is disabled.`
+        `(/) Command ${interaction.commandName} execution is disabled.`
       );
 
     return await command.execute(interaction).catch((err) => {
