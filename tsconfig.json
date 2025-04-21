@@ -30,6 +30,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@utils/*": ["src/utils/*"],
+      "@lib/*": ["src/lib/*"],
       "@client": ["./src/index.ts"],
     }
   }
