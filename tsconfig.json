@@ -29,7 +29,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@lib/*": ["./src/lib/*"],
+      "@lib/*": ["src/utils/*"],
       "@client": ["./src/index.ts"],
     }
   }
