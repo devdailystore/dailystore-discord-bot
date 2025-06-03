@@ -3,7 +3,9 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:build": "docker build -t dailystore-db ./database",
+    "db:start": "docker run -d -p 5432:5432 --name dailystore-db --env-file .env dailystore-db"
   },
   "prisma": {
     "schema": "database/schema.prisma"
@@ -15,6 +17,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@prisma/client": "^6.8.2",
     "discord.js": "^14.19.3",
     "prisma": "^6.8.2"
   }
