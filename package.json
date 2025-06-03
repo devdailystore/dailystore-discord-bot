@@ -2,10 +2,20 @@
   "name": "dailystore-discord-bot",
   "module": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "prisma": {
+    "schema": "database/schema.prisma"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "prisma": "^6.8.2"
   }
 }
